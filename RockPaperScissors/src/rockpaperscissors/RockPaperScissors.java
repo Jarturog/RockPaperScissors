@@ -12,13 +12,13 @@ public class RockPaperScissors {
         a[2] = sc;
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a.length; j++) {
-                boolean gana = a[i].beats(a[j]);
-                boolean pierde = a[i].losesTo(a[j]);
-                //boolean empate = !beats && !losesTo;
+                boolean win = a[i].beats(a[j]);
+                boolean lose = a[i].losesTo(a[j]);
+                //boolean tie = !win && !lose;
                 String s;
-                if (gana) {
+                if (win) {
                     s = " beats ";
-                } else if (pierde) {
+                } else if (lose) {
                     s = " loses to ";
                 } else {
                     s = " ties to ";
